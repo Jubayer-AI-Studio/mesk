@@ -18,7 +18,7 @@ const hindSiliguri = Hind_Siliguri({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://meshk-prokashon.vercel.app"),
+  metadataBase: new URL("https://mesk-nine.vercel.app"),
   title: "মেশক প্রকাশন | বই আলো • বই সুবাস — মুহাম্মদ যাইনুল আবিদীন",
   description:
     "মেশক প্রকাশন (Meshk Prokashon)-এর অফিশিয়াল ওয়েবসাইট ও গ্রন্থশালা। লেখক মাওলানা মুহাম্মদ যাইনুল আবিদীনের সাহিত্য, সীরাত, ইতিহাস, ফিকহ ও আত্মশুদ্ধির বইসমূহ এবং রকমারি, ওয়াফিলাইফ ও সরাসরি অর্ডারের সমন্বিত প্ল্যাটফর্ম।",
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "মেশক প্রকাশন | বই আলো • বই সুবাস — মুহাম্মদ যাইনুল আবিদীন",
     description:
-      "মেশক প্রকাশন ও মাওলানা মুহাম্মদ যাইনুল আবিদীনের অফিশিয়াল গ্রন্থশালা ও প্রকাশনা সম্ভার।",
-    url: "https://meshk-prokashon.vercel.app",
+      "মেশক প্রকাশনের অফিশিয়াল গ্রন্থশালা। বই আলো • বই সুবাস।",
+    url: "https://mesk-nine.vercel.app",
     siteName: "মেশক প্রকাশন",
     locale: "bn_BD",
     type: "website",
@@ -72,14 +72,20 @@ export const metadata: Metadata = {
         url: "/images/og-meshk-banner.png",
         width: 1200,
         height: 630,
-        alt: "মেশক প্রকাশন — মুহাম্মদ যাইনুল আবিদীন",
+        alt: "মেশক প্রকাশন লোগো",
+      },
+      {
+        url: "/icons/icon-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "মেশক প্রকাশন লোগো",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "মেশক প্রকাশন — মুহাম্মদ যাইনুল আবিদীন",
-    description: "মেশক প্রকাশন ও মাওলানা মুহাম্মদ যাইনুল আবিদীনের অফিশিয়াল গ্রন্থশালা।",
+    description: "মেশক প্রকাশনের অফিশিয়াল গ্রন্থশালা। বই আলো • বই সুবাস।",
     images: ["/images/og-meshk-banner.png"],
   },
 };
