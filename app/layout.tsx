@@ -97,6 +97,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bn" className={hindSiliguri.variable}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if ('serviceWorker' in navigator) {
+                  navigator.serviceWorker.getRegistrations().then(function(regs) {
+                    for (var i = 0; i < regs.length; i++) { regs[i].unregister(); }
+                  });
+                }
+                if ('caches' in window) {
+                  caches.keys().then(function(keys) {
+                    for (var i = 0; i < keys.length; i++) { caches.delete(keys[i]); }
+                  });
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen font-sans bg-[#F6F1E7] text-stone-900 antialiased selection:bg-amber-200 selection:text-amber-950">
         <ServiceWorkerRegister />
         {children}

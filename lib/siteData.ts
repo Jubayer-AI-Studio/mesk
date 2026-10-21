@@ -14,9 +14,9 @@ export const siteConfig: SiteConfig = {
     "বই মানুষের আত্মাকে আলো দেয়, চিন্তা ও মননকে শাণিত করে।",
   authorQuoteAuthor: "মাওলানা মুহাম্মদ যাইনুল আবিদীন",
   officialAddress: "বাংলাবাজার / ঢাকা, বাংলাদেশ",
-  whatsappNumber: "8801577118153",
-  whatsappDisplay: "+880 1577-118153",
-  phoneDisplay: "01577-118153",
+  whatsappNumber: "8801978174560",
+  whatsappDisplay: "+880 1978-174560",
+  phoneDisplay: "01978-174560",
   facebookPage: "https://www.facebook.com/tima.mesaka/",
   facebookProfile: "https://www.facebook.com/tima.mesaka/",
   rokomariPublisherUrl:
