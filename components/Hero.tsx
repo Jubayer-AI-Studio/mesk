@@ -4,27 +4,37 @@ import React from "react";
 import { siteConfig } from "@/lib/siteData";
 import { ExternalLink, Sparkles, BookCheck } from "lucide-react";
 
-export default function Hero() {
+interface HeroProps {
+  onOpenAuthorBio?: () => void;
+}
+
+export default function Hero({ onOpenAuthorBio }: HeroProps) {
   return (
     <section className="pt-8 sm:pt-12 pb-6 px-4 text-center relative overflow-hidden">
       {/* Subtle Ambient Background Light */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-200/25 rounded-full blur-3xl pointer-events-none -z-10" />
 
-      {/* Author Profile Picture (Guaranteed 96px x 96px Circular Avatar) */}
+      {/* Author Profile Picture (Full Dignified HD Portrait Showcase) */}
       <div className="relative inline-block mb-4">
         <div
-          style={{ width: "96px", height: "96px" }}
-          className="w-24 h-24 rounded-full overflow-hidden border-2 border-amber-800 shadow-lg ring-4 ring-amber-500/20 bg-stone-200 mx-auto relative transition-transform hover:scale-105 duration-300"
+          onClick={onOpenAuthorBio}
+          className="w-44 sm:w-52 md:w-56 aspect-[1024/960] p-1.5 bg-gradient-to-b from-amber-600/50 via-amber-800/70 to-amber-950/90 rounded-2xl sm:rounded-3xl shadow-xl ring-4 ring-amber-500/20 mx-auto relative transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl cursor-pointer group"
+          title="মাওলানা মুহাম্মদ যাইনুল আবিদীনের সংক্ষিপ্ত জীবনী দেখুন"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/author-library.jpg"
-            alt={siteConfig.authorName}
-            className="w-full h-full object-cover object-center"
-          />
+          <div className="w-full h-full rounded-[14px] sm:rounded-[20px] overflow-hidden bg-stone-900 relative">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/author-portrait-hd.jpg"
+              alt={siteConfig.authorName}
+              className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
         </div>
-        <div className="absolute -bottom-1 -right-1 bg-amber-700 text-white p-1 rounded-full shadow-xs border-2 border-[#F6F1E7]">
-          <BookCheck className="w-3.5 h-3.5" />
+
+        {/* Verification Emblem Badge */}
+        <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-amber-700 via-amber-800 to-amber-950 text-white px-2.5 py-1 rounded-full shadow-lg border-2 border-[#F6F1E7] flex items-center gap-1.5 text-[11px] font-bold">
+          <BookCheck className="w-3.5 h-3.5 text-amber-300" />
+          <span>লেখক ও প্রতিষ্ঠাতা</span>
         </div>
       </div>
 

@@ -45,12 +45,12 @@ export default function AuthorBioModal({ isOpen, onClose }: AuthorBioModalProps)
         {/* Content */}
         <div className="p-5 sm:p-7 overflow-y-auto space-y-6">
           <div className="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-lg border-2 border-amber-800/40 bg-stone-200 shrink-0 relative">
+            <div className="w-36 sm:w-44 aspect-[1024/960] rounded-2xl overflow-hidden shadow-xl border-2 border-amber-800/50 bg-stone-900 shrink-0 relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/author-library.jpg"
+                src="/images/author-portrait-hd.jpg"
                 alt={siteConfig.authorName}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div>

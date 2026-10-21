@@ -45,7 +45,7 @@ export default function Home() {
         "@id": "https://meshkprokashon.com/#author",
         "name": siteConfig.authorName,
         "jobTitle": siteConfig.authorTitle,
-        "image": "https://meshkprokashon.com/images/author-library.jpg",
+        "image": "https://mesk-nine.vercel.app/images/author-portrait-hd.jpg",
         "description": siteConfig.authorBio,
         "sameAs": [
           siteConfig.rokomariAuthorUrl,
@@ -85,8 +85,8 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1 relative z-10">
-        {/* Author & Publication Hero (Small 96px circular avatar) */}
-        <Hero />
+        {/* Author & Publication Hero (Prominent HD Portrait Showcase) */}
+        <Hero onOpenAuthorBio={() => setIsAuthorBioOpen(true)} />
 
         {/* 3D Realistic Bookshelf (Wooden & Emerald Shelves) */}
         <Bookshelf
