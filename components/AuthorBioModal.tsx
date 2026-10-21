@@ -93,10 +93,10 @@ export default function AuthorBioModal({ isOpen, onClose }: AuthorBioModalProps)
             </div>
 
             <div className="p-3 rounded-xl bg-amber-50/70 border border-amber-900/10 flex items-start gap-2.5">
-              <HeartHandshake className="w-5 h-5 text-rose-700 shrink-0 mt-0.5" />
+              <Feather className="w-5 h-5 text-amber-800 shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-xs text-stone-900">ভদ্রতার মূল্যবোধ</p>
-                <p className="text-[11px] text-stone-600">&ldquo;ভদ্রতার চেয়ে বড় কোনো নেয়ামত নাই&rdquo;।</p>
+                <p className="font-bold text-xs text-stone-900">সাহিত্য ও মনন</p>
+                <p className="text-[11px] text-stone-600">ইসলামিক ও প্রাঞ্জল বাংলা সাহিত্যের সমৃদ্ধ বিকাশ।</p>
               </div>
             </div>
           </div>

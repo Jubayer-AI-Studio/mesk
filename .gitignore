@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# WhatsApp Auth Session
+whatsapp_auth_info/
+
 # Scraping & Temporary data files
 *.html
 *.log
@@ -52,3 +55,5 @@ formatted_*.json
 books_with_local_paths.json
 *.js
 !next.config.ts
+
+.vercel

@@ -85,13 +85,13 @@ export default function AuthorBioSection() {
               </div>
 
               <div className="p-3.5 rounded-xl bg-white border border-amber-900/10 flex items-start gap-3">
-                <HeartHandshake className="w-5 h-5 text-rose-700 shrink-0 mt-0.5" />
+                <BookOpen className="w-5 h-5 text-amber-800 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-xs sm:text-sm text-stone-900">
-                    চরিত্র ও শিষ্টাচার
+                    সাহিত্য ও মনন
                   </h4>
                   <p className="text-xs text-stone-600 mt-0.5">
-                    &ldquo;ভদ্রতার চেয়ে বড় কোনো নেয়ামত নাই&rdquo; — এই মূলনীতির প্রচারক।
+                    বিশুদ্ধ ভাষা ও আদর্শিক চিন্তার একনিষ্ঠ সাধক।
                   </p>
                 </div>
               </div>

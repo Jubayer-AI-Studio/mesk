@@ -3,14 +3,12 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import QuoteCard from "@/components/QuoteCard";
 import Bookshelf from "@/components/Bookshelf";
 import BookModal from "@/components/BookModal";
 import AllBooksSearchModal from "@/components/AllBooksSearchModal";
 import AuthorBioModal from "@/components/AuthorBioModal";
 import AuthorMessage from "@/components/AuthorMessage";
 import Footer from "@/components/Footer";
-import AIChatWidget from "@/components/AIChatWidget";
 import { meshkOriginalBooks, authorMasterArchive, siteConfig } from "@/lib/siteData";
 import { BookItem } from "@/lib/types";
 
@@ -89,9 +87,6 @@ export default function Home() {
         {/* Author & Publication Hero (Small 96px circular avatar) */}
         <Hero />
 
-        {/* Quote / Direct Chat Card */}
-        <QuoteCard />
-
         {/* 3D Realistic Bookshelf (Wooden & Emerald Shelves) */}
         <Bookshelf
           meshkBooks={meshkOriginalBooks}
@@ -126,9 +121,6 @@ export default function Home() {
         isOpen={isAuthorBioOpen}
         onClose={() => setIsAuthorBioOpen(false)}
       />
-
-      {/* AI Assistant Chatbot Widget (Brain & Smart Book Guide) */}
-      <AIChatWidget />
     </div>
   );
 }
