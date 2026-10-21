@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-hind-siliguri), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Realistic Wooden Shelf Styles */
+.wooden-shelf-frame {
+  background: linear-gradient(180deg, #2b170c 0%, #1e0e06 100%);
+  border: 4px solid #4a2711;
+  box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.6), 0 10px 25px rgba(35, 18, 8, 0.25);
+}
+
+.emerald-shelf-frame {
+  background: linear-gradient(180deg, #0f271d 0%, #081711 100%);
+  border: 4px solid #1a4231;
+  box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.6), 0 10px 25px rgba(10, 30, 20, 0.25);
+}
+
+.wooden-plank {
+  background: linear-gradient(180deg, #5c3216 0%, #3e1f0b 45%, #2a1406 100%);
+  border-top: 3px solid #7c4824;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+.emerald-plank {
+  background: linear-gradient(180deg, #1c4b37 0%, #113324 45%, #091c14 100%);
+  border-top: 3px solid #28684d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+/* 3D Book on Shelf Effect */
+.book-spine-effect {
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom center;
+}
+
+.book-spine-effect:hover {
+  transform: translateY(-8px) scale(1.03);
+  z-index: 20;
+}
+
+.book-spine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.15) 30%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ece0cc;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3a882;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a88a62;
 }

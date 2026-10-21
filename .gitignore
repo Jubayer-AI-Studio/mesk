@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Scraping & Temporary data files
+*.html
+*.log
+rokomari_*.json
+/wafilife_*.html
+all_*.json
+purified_*.json
+pure_*.json
+formatted_*.json
+books_with_local_paths.json
+*.js
+!next.config.ts

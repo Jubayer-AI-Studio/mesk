@@ -1,0 +1,96 @@
+"use client";
+
+import React from "react";
+import { siteConfig } from "@/lib/siteData";
+import { ExternalLink, Sparkles, BookCheck } from "lucide-react";
+
+export default function Hero() {
+  return (
+    <section className="pt-8 sm:pt-12 pb-6 px-4 text-center relative overflow-hidden">
+      {/* Subtle Ambient Background Light */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-200/25 rounded-full blur-3xl pointer-events-none -z-10" />
+
+      {/* Author Profile Picture (Guaranteed 96px x 96px Circular Avatar) */}
+      <div className="relative inline-block mb-4">
+        <div
+          style={{ width: "96px", height: "96px" }}
+          className="w-24 h-24 rounded-full overflow-hidden border-2 border-amber-800 shadow-lg ring-4 ring-amber-500/20 bg-stone-200 mx-auto relative transition-transform hover:scale-105 duration-300"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/author-library.jpg"
+            alt={siteConfig.authorName}
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div className="absolute -bottom-1 -right-1 bg-amber-700 text-white p-1 rounded-full shadow-xs border-2 border-[#F6F1E7]">
+          <BookCheck className="w-3.5 h-3.5" />
+        </div>
+      </div>
+
+      {/* Author Name & Badges */}
+      <div className="flex items-center justify-center gap-2 mb-2">
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+          {siteConfig.authorName}
+        </h1>
+        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-amber-200/90 text-amber-950 border border-amber-400/60 shadow-2xs">
+          লেখক ও প্রতিষ্ঠাতা
+        </span>
+      </div>
+
+      {/* Subtitle / Bio summary */}
+      <p className="max-w-xl mx-auto text-stone-700 text-sm sm:text-base leading-relaxed mb-5">
+        {siteConfig.brandName}-এর অফিশিয়াল গ্রন্থশালা ও প্রকাশনা সম্ভার। ভাষা, সাহিত্য,
+        সীরাত, ফিকহ ও সমাজচিন্তার এক আলোকিত সম্মিলন।
+      </p>
+
+      {/* Total Views & Availability Pill Badges */}
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-100/90 border border-stone-300/80 text-stone-800 font-semibold shadow-2xs">
+          <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+          <span>প্রকাশিত বই: ১১০+ টি</span>
+        </div>
+
+        <span className="text-stone-500 text-xs font-semibold uppercase tracking-wider hidden sm:inline">
+          অনলাইন বুকস্টোর:
+        </span>
+
+        {/* Rokomari Link */}
+        <a
+          href={siteConfig.rokomariPublisherUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white text-stone-800 border border-stone-300/90 font-medium transition-all hover:scale-105 active:scale-95 shadow-2xs"
+        >
+          <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+          <span>রকমারি</span>
+          <ExternalLink className="w-3 h-3 text-stone-400" />
+        </a>
+
+        {/* Wafilife Link */}
+        <a
+          href={siteConfig.wafilifePublisherUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white text-stone-800 border border-stone-300/90 font-medium transition-all hover:scale-105 active:scale-95 shadow-2xs"
+        >
+          <span className="w-2 h-2 rounded-full bg-emerald-600" />
+          <span>ওয়াফিলাইফ</span>
+          <ExternalLink className="w-3 h-3 text-stone-400" />
+        </a>
+
+        {/* Kitabghor Link */}
+        <a
+          href={siteConfig.kitabghorPublisherUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white text-stone-800 border border-stone-300/90 font-medium transition-all hover:scale-105 active:scale-95 shadow-2xs"
+        >
+          <span className="w-2 h-2 rounded-full bg-blue-600" />
+          <span>কিতাবঘর</span>
+          <ExternalLink className="w-3 h-3 text-stone-400" />
+        </a>
+      </div>
+    </section>
+  );
+}

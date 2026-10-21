@@ -1,69 +1,134 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import QuoteCard from "@/components/QuoteCard";
+import Bookshelf from "@/components/Bookshelf";
+import BookModal from "@/components/BookModal";
+import AllBooksSearchModal from "@/components/AllBooksSearchModal";
+import AuthorBioModal from "@/components/AuthorBioModal";
+import AuthorMessage from "@/components/AuthorMessage";
+import Footer from "@/components/Footer";
+import AIChatWidget from "@/components/AIChatWidget";
+import { meshkOriginalBooks, authorMasterArchive, siteConfig } from "@/lib/siteData";
+import { BookItem } from "@/lib/types";
 
 export default function Home() {
+  const [selectedBook, setSelectedBook] = useState<BookItem | null>(null);
+  const [isAllBooksOpen, setIsAllBooksOpen] = useState(false);
+  const [isAuthorBioOpen, setIsAuthorBioOpen] = useState(false);
+
+  // Filter classic masterpieces (books not part of the initial 17 Meshk direct ones)
+  const classicMasterpieces = authorMasterArchive.filter((b) => !b.isMeshkOriginal);
+
+  // Structured Data Schema for Google SEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://meshkprokashon.com/#organization",
+        "name": siteConfig.brandName,
+        "alternateName": siteConfig.englishBrandName,
+        "url": "https://meshkprokashon.com",
+        "logo": "https://meshkprokashon.com/images/mesk-logo.png",
+        "slogan": siteConfig.slogan,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": siteConfig.whatsappDisplay,
+          "contactType": "customer service",
+          "availableLanguage": ["bn", "en"]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://meshkprokashon.com/#author",
+        "name": siteConfig.authorName,
+        "jobTitle": siteConfig.authorTitle,
+        "image": "https://meshkprokashon.com/images/author-library.jpg",
+        "description": siteConfig.authorBio,
+        "sameAs": [
+          siteConfig.rokomariAuthorUrl,
+          siteConfig.facebookProfile
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://meshkprokashon.com/#website",
+        "url": "https://meshkprokashon.com",
+        "name": `${siteConfig.brandName} - ${siteConfig.slogan}`,
+        "publisher": {
+          "@id": "https://meshkprokashon.com/#organization"
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="min-h-screen bg-gradient-to-b from-[#F6F1E7] via-[#ECE0CC] to-[#DFCDB0] text-stone-900 flex flex-col font-sans antialiased selection:bg-amber-200 selection:text-amber-950 relative overflow-x-hidden">
+      {/* Google Structured Data Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Decorative Radial Background Lights */}
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_100%_45%_at_50%_0%,rgba(225,185,135,0.25),transparent_75%)] pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_15%_40%,rgba(215,170,115,0.15),transparent_60%)] pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_85%_65%,rgba(195,145,95,0.15),transparent_60%)] pointer-events-none" />
+
+      {/* Sticky Header */}
+      <Navbar
+        onOpenAllBooks={() => setIsAllBooksOpen(true)}
+        onOpenAuthorBio={() => setIsAuthorBioOpen(true)}
+      />
+
+      {/* Main Content */}
+      <main className="flex-1 relative z-10">
+        {/* Author & Publication Hero (Small 96px circular avatar) */}
+        <Hero />
+
+        {/* Quote / Direct Chat Card */}
+        <QuoteCard />
+
+        {/* 3D Realistic Bookshelf (Wooden & Emerald Shelves) */}
+        <Bookshelf
+          meshkBooks={meshkOriginalBooks}
+          classicBooks={classicMasterpieces}
+          onSelectBook={(book) => setSelectedBook(book)}
+          onOpenAllBooks={() => setIsAllBooksOpen(true)}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        {/* Direct Message to Author/Publisher via WhatsApp */}
+        <AuthorMessage />
       </main>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Single Book Details Modal */}
+      <BookModal
+        book={selectedBook}
+        onClose={() => setSelectedBook(null)}
+      />
+
+      {/* All 110+ Books Interactive Search Modal */}
+      <AllBooksSearchModal
+        isOpen={isAllBooksOpen}
+        onClose={() => setIsAllBooksOpen(false)}
+        allBooks={authorMasterArchive}
+        onSelectBook={(book) => setSelectedBook(book)}
+      />
+
+      {/* Author Bio Modal */}
+      <AuthorBioModal
+        isOpen={isAuthorBioOpen}
+        onClose={() => setIsAuthorBioOpen(false)}
+      />
+
+      {/* AI Assistant Chatbot Widget (Brain & Smart Book Guide) */}
+      <AIChatWidget />
     </div>
   );
 }
