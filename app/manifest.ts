@@ -2,13 +2,21 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+    id: "/",
     name: "মেশক প্রকাশন — মুহাম্মদ যাইনুল আবিদীন",
     short_name: "মেশক প্রকাশন",
     description: "মেশক প্রকাশন ও মাওলানা মুহাম্মদ যাইনুল আবিদীনের অফিশিয়াল গ্রন্থশালা।",
-    start_url: "/",
+    start_url: "/?source=pwa",
+    scope: "/",
     display: "standalone",
+    display_override: ["standalone", "minimal-ui"],
     background_color: "#F6F1E7",
     theme_color: "#3d200f",
+    orientation: "portrait-primary",
+    categories: ["books", "shopping", "education"],
+    prefer_related_applications: false,
+    lang: "bn",
+    dir: "ltr",
     icons: [
       {
         src: "/icons/icon-192x192.png",
