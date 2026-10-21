@@ -8,6 +8,7 @@ import BookModal from "@/components/BookModal";
 import AllBooksSearchModal from "@/components/AllBooksSearchModal";
 import AuthorBioModal from "@/components/AuthorBioModal";
 import AuthorMessage from "@/components/AuthorMessage";
+import FacebookCard from "@/components/FacebookCard";
 import Footer from "@/components/Footer";
 import { meshkOriginalBooks, authorMasterArchive, siteConfig } from "@/lib/siteData";
 import { BookItem } from "@/lib/types";
@@ -94,6 +95,9 @@ export default function Home() {
           onSelectBook={(book) => setSelectedBook(book)}
           onOpenAllBooks={() => setIsAllBooksOpen(true)}
         />
+
+        {/* Facebook Page Graphic Card */}
+        <FacebookCard />
 
         {/* Direct Message to Author/Publisher via WhatsApp */}
         <AuthorMessage />
