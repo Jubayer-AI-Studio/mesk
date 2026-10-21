@@ -61,22 +61,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: "মেশক প্রকাশন | বই আলো • বই সুবাস — মুহাম্মদ যাইনুল আবিদীন",
     description:
-      "মেশক প্রকাশনের অফিশিয়াল গ্রন্থশালা। বই আলো • বই সুবাস।",
+      "মেশক প্রকাশনের অফিশিয়াল গ্রন্থশালা। বই আলো • বই সুবাস। প্রকাশনীর সকল বইয়ে ৫০% বিশেষ কমিশন।",
     url: "https://mesk-nine.vercel.app",
     siteName: "মেশক প্রকাশন",
     locale: "bn_BD",
     type: "website",
     images: [
       {
-        url: "/images/og-meshk-banner.png",
+        url: "https://mesk-nine.vercel.app/images/og-meshk-banner.png",
+        secureUrl: "https://mesk-nine.vercel.app/images/og-meshk-banner.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "মেশক প্রকাশন লোগো",
       },
       {
-        url: "/icons/icon-512x512.png",
+        url: "https://mesk-nine.vercel.app/icons/icon-512x512.png",
+        secureUrl: "https://mesk-nine.vercel.app/icons/icon-512x512.png",
         width: 512,
         height: 512,
+        type: "image/png",
         alt: "মেশক প্রকাশন লোগো",
       },
     ],
@@ -85,7 +89,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "মেশক প্রকাশন — মুহাম্মদ যাইনুল আবিদীন",
     description: "মেশক প্রকাশনের অফিশিয়াল গ্রন্থশালা। বই আলো • বই সুবাস।",
-    images: ["/images/og-meshk-banner.png"],
+    images: ["https://mesk-nine.vercel.app/images/og-meshk-banner.png"],
   },
 };
 
