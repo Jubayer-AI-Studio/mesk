@@ -14,11 +14,10 @@ export const siteConfig: SiteConfig = {
     "বই মানুষের আত্মাকে আলো দেয়, চিন্তা ও মননকে শাণিত করে।",
   authorQuoteAuthor: "মাওলানা মুহাম্মদ যাইনুল আবিদীন",
   officialAddress: "বাংলাবাজার / ঢাকা, বাংলাদেশ",
-  whatsappNumber: "8801354840991",
-  whatsappDisplay: "+880 1354-840991",
-  phoneDisplay: "01354-840991",
-  facebookPage:
-    "https://www.facebook.com/p/%E0%A6%AE%E0%A7%87%E0%A6%B6%E0%A6%95-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B6%E0%A6%A8-61579714417210/",
+  whatsappNumber: "8801577118153",
+  whatsappDisplay: "+880 1577-118153",
+  phoneDisplay: "01577-118153",
+  facebookPage: "https://www.facebook.com/tima.mesaka/",
   facebookProfile: "https://www.facebook.com/tima.mesaka/",
   rokomariPublisherUrl:
     "https://www.rokomari.com/book/publisher/16359/mesk-prokashan?ref=psr101",
