@@ -125,7 +125,7 @@ export default function RokomariReaderModal({
               </p>
 
               {book.salePrice ? (
-                <div className="pt-2 flex items-center justify-center sm:justify-start gap-3">
+                <div className="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-2.5">
                   <span className="text-2xl font-extrabold text-amber-900">
                     ৳ {book.salePrice}
                   </span>
@@ -135,8 +135,13 @@ export default function RokomariReaderModal({
                     </span>
                   )}
                   {book.regularPrice && book.salePrice && (
-                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300">
+                    <span className="text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-600 text-white shadow-xs">
                       {Math.round(((book.regularPrice - book.salePrice) / book.regularPrice) * 100)}% ছাড়
+                    </span>
+                  )}
+                  {book.isMeshkOriginal && (
+                    <span className="text-[11px] font-bold text-amber-900 bg-amber-100 px-2 py-0.5 rounded border border-amber-300">
+                      মেশক সরাসরি প্রকাশনী মূল্য
                     </span>
                   )}
                 </div>
@@ -146,15 +151,15 @@ export default function RokomariReaderModal({
 
           {/* Rokomari Official Look Inside Notice / Link */}
           {rokomariLookInsideUrl && (
-            <div className="p-4 rounded-2xl bg-gradient-to-r from-red-50 via-amber-50 to-red-50 border border-red-200/80 space-y-2 text-center sm:text-left">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div className="space-y-0.5">
-                  <div className="flex items-center justify-center sm:justify-start gap-1.5 font-bold text-stone-900 text-sm">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
-                    <span>রকমারি অফিশিয়াল “একটু পড়ে দেখুন” প্রিভিউ</span>
+            <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-red-600 via-rose-600 to-amber-700 text-white shadow-lg space-y-2">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+                <div className="space-y-1">
+                  <div className="inline-flex items-center gap-2 font-bold text-sm sm:text-base">
+                    <BookOpen className="w-5 h-5 text-amber-200" />
+                    <span>রকমারি অফিশিয়াল “একটু পড়ে দেখুন”</span>
                   </div>
-                  <p className="text-xs text-stone-600">
-                    রকমারি ডট কম-এ সংরক্ষিত অফিশিয়াল স্ক্যান করা পৃষ্ঠা সরাসরি ব্রাউজারে পড়ুন।
+                  <p className="text-xs text-rose-100 leading-relaxed">
+                    বইটির প্রথম কয়েক পৃষ্ঠা ও সূচিপত্রের স্ক্যান করা আসল পাতা রকমারিতে সরাসরি পড়তে পারবেন।
                   </p>
                 </div>
 
@@ -162,12 +167,32 @@ export default function RokomariReaderModal({
                   href={rokomariLookInsideUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs shadow-md transition-all active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-red-700 hover:bg-rose-50 font-extrabold text-xs sm:text-sm shadow-md transition-all active:scale-95 shrink-0"
                 >
-                  <span>রকমারিতে নমুনা পড়ুন</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>রকমারিতে পৃষ্ঠা পড়ুন</span>
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
+            </div>
+          )}
+
+          {/* Table of Contents (If available) */}
+          {book.tableOfContents && book.tableOfContents.length > 0 && (
+            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-stone-200 shadow-2xs space-y-3">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-amber-900 flex items-center gap-2 border-b border-amber-900/10 pb-2">
+                <BookOpen className="w-4 h-4 text-amber-700" />
+                <span>বইয়ের সূচিপত্র ও আলোচিত বিষয়সমূহ</span>
+              </h3>
+              <ul className="divide-y divide-stone-100">
+                {book.tableOfContents.map((chapter, idx) => (
+                  <li key={idx} className="py-2.5 flex items-start gap-3 text-xs sm:text-sm text-stone-700">
+                    <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs mt-0.5">
+                      {idx + 1}
+                    </span>
+                    <span className="font-medium pt-0.5 leading-snug">{chapter}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 

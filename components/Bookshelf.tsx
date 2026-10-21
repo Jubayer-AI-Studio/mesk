@@ -45,14 +45,19 @@ export default function Bookshelf({
         {/* Section Heading */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-amber-900/15 pb-2">
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold text-stone-900 flex items-center gap-2">
-              <span>Hard Copy (মুদ্রিত গ্রন্থমালা)</span>
-              <span className="text-xs font-semibold text-amber-950 bg-amber-200/90 px-2.5 py-0.5 rounded-full border border-amber-300">
+            <div className="flex flex-wrap items-center gap-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-stone-900">
+                Hard Copy (মুদ্রিত গ্রন্থমালা)
+              </h2>
+              <span className="text-xs font-bold text-amber-950 bg-amber-200/90 px-2.5 py-0.5 rounded-full border border-amber-300">
                 মেশক প্রকাশন ({meshkBooks.length} টি)
               </span>
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600 mt-0.5">
-              মেশক প্রকাশন থেকে প্রকাশিত প্রামাণ্য মৌলিক ও গবেষণাধর্মী গ্রন্থমালা
+              <span className="text-xs font-extrabold text-white bg-rose-600 px-2.5 py-0.5 rounded-full shadow-xs">
+                ৫০% ফ্ল্যাট ছাড়
+              </span>
+            </div>
+            <p className="text-xs sm:text-sm text-stone-600 mt-1">
+              মেশক প্রকাশনীর সকল মৌলিক গ্রন্থে সরাসরি প্রকাশনী থেকে ৫০% বিশেষ কমিশন
             </p>
           </div>
         </div>

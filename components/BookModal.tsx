@@ -107,8 +107,13 @@ export default function BookModal({ book, onClose }: BookModalProps) {
                     </div>
                   )}
                   {book.regularPrice && book.salePrice && (
-                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300">
+                    <span className="text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-600 text-white shadow-xs">
                       {Math.round(((book.regularPrice - book.salePrice) / book.regularPrice) * 100)}% ছাড়
+                    </span>
+                  )}
+                  {book.isMeshkOriginal && (
+                    <span className="text-[11px] font-bold text-amber-900 bg-amber-100 px-2 py-0.5 rounded border border-amber-300">
+                      মেশক সরাসরি প্রকাশনী মূল্য
                     </span>
                   )}
                 </div>

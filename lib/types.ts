@@ -19,6 +19,8 @@ export interface BookItem {
   pages?: string;
   synopsis?: string;
   edition?: string;
+  tableOfContents?: string[];
+  hasRokomariPreview?: boolean;
 }
 
 export interface SiteConfig {
