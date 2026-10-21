@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
-import PWAInstallBanner from "@/components/PWAInstallBanner";
 
 export const viewport: Viewport = {
   themeColor: "#3d200f",
@@ -89,7 +88,6 @@ export default function RootLayout({
       <body className="min-h-screen font-sans bg-[#F6F1E7] text-stone-900 antialiased selection:bg-amber-200 selection:text-amber-950">
         <ServiceWorkerRegister />
         {children}
-        <PWAInstallBanner />
       </body>
     </html>
   );

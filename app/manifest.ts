@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "মেশক প্রকাশন — মুহাম্মদ যাইনুল আবিদীন",
     short_name: "মেশক প্রকাশন",
     description: "মেশক প্রকাশন ও মাওলানা মুহাম্মদ যাইনুল আবিদীনের অফিশিয়াল গ্রন্থশালা।",
-    start_url: "/?source=pwa",
+    start_url: "/",
     scope: "/",
     display: "standalone",
     display_override: ["standalone", "minimal-ui"],
