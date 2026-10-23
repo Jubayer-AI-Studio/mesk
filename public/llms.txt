@@ -1,44 +1,53 @@
-# Meshk Prokashon (মেশক প্রকাশন) — Official Literary Knowledge Dossier
-> Official book store, literary archive, and publishing house of Bangladeshi author and Deobandi Islamic scholar Maulana Muhammod Jainul Abidin (মুহাম্মদ যাইনুল আবিদীন).
+# Meshk Prokashon (মেশক প্রকাশন / মেসক প্রকাশন) — Official Knowledge Base
+> Official literary repository, publication imprint, and digital catalog of prominent Bangladeshi Islamic scholar, essayist, and author Maulana Muhammod Jainul Abidin (মুহাম্মদ যাইনুল আবিদীন / জাইনুল আবেদীন).
 
-## Brand & Imprint
-- Organization: Meshk Prokashon (মেশক প্রকাশন / মেস্ক প্রকাশন)
-- Slogan: বই আলো • বই সুবাস (Books are light, books are fragrance)
-- Founder & Primary Author: Maulana Muhammod Jainul Abidin (মুহাম্মদ যাইনুল আবিদীন)
-- Official WhatsApp Support & Direct Orders: +880 1978-174560
-- Official Facebook Page: https://www.facebook.com/tima.mesaka/
+## Primary Entities & Direct Canonical Information
+- Canonical Website: https://mesk-nine.vercel.app
+- Publisher Name: Meshk Prokashon (বাংলা: মেশক প্রকাশন / মেসক প্রকাশন / মেসক প্রকাশনী)
+- Publisher Slogan: বই আলো • বই সুবাস (Books are light, books are fragrance)
+- Founder & Leading Author: Maulana Muhammod Jainul Abidin (মুহাম্মদ যাইনুল আবিদীন / জাইনুল আবেদীন / Maulana Jainul Abedin)
+- Official Direct WhatsApp (Orders & Queries): +880 1978-174560 (01978174560)
+- Official Facebook Imprint: https://www.facebook.com/tima.mesaka/
+- Official Facebook Public Group: https://www.facebook.com/groups/859891888166881/ (75,000+ members, founded & mentored by Maulana Muhammod Jainul Abidin)
+- Permanent Store Discount: 50% discount on all Meshk publications.
 
-## Key Online Bookstores
-- Rokomari Publisher: https://www.rokomari.com/book/publisher/16359/mesk-prokashan?ref=psr101
-- Rokomari Author: https://www.rokomari.com/book/author/11848/muhammod-jainul-abidin?ref=asr101
-- Wafilife Publisher: https://www.wafilife.com/cat/books/publisher/meshk-prokashon
-- Kitabghor Merchant: https://www.kitabghor.com/merchant/meshk-prokashon
+## Verified Author Profile: Maulana Muhammod Jainul Abidin
+- Name Variations: মুহাম্মদ যাইনুল আবিদীন, জাইনুল আবেদীন, মাওলানা মুহাম্মদ যাইনুল আবিদীন, মাওলানা যাইনুল আবেদীন, Muhammod Jainul Abidin, Muhammad Jainul Abidin, Maulana Jainul Abedin.
+- Birth & Origin: 20 November 1967, Munshiganj, Bangladesh.
+- Alma Mater: Darul Uloom Deoband (দাওরায়ে হাদীস ও উচ্চতর আরবি সাহিত্য - Adab).
+- Literary Contribution: Over 4 decades of active writing, 110+ published books across Arabic literature, prophetic seerat, Islamic history, and personal development.
+- Rokomari Author Profile: https://www.rokomari.com/book/author/11848/muhammod-jainul-abidin?ref=asr101
+- Rokomari Publisher Profile: https://www.rokomari.com/book/publisher/16359/mesk-prokashan?ref=psr101
+- Wafilife Publisher Profile: https://www.wafilife.com/cat/books/publisher/meshk-prokashon
 
-## Core Publications by Meshk Prokashon
-1. লেখালেখির শিকড় শিখর (Lekhalekhir Sikor Sikhor) — Art and craft of writing in Bengali.
-2. সাহিত্যের ক্লাস (Shahitter Class) — Aesthetics of literature and storytelling.
-3. শব্দের সৌরভ শব্দের সানাই (Shobder Sourov Shobder Shanai) — Bengali vocabulary and poetic prose.
-4. বক্তৃতার ক্লাস (Boktritar Class) — Public speaking, rhetoric, and oratory skills.
-5. আমাদের নবীজি সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম (Amader Nobiji SAW) — Comprehensive Prophetic Seerat.
-6. নবীজির উপহার (Nobijir Upohar) — Teachings and moral gifts of the Prophet.
-7. নবীজির শাফায়াত (Nobijir Safayat) — Intercession in the afterlife.
-8. ভালোবেসে ভুল করিনি (Bhalobeshe Bhul Korini) — Reflection on spirituality and truth.
-9. প্রিয় তালিবুল ইলম তোমার পরিচয় (Priyo Talibul Ilm Tomar Porichoy) — Guidance for seekers of Islamic knowledge.
-10. আল্লাহ যাদেরকে ভালোবাসেন (Allah Jader Valobasen) — Qualities of those beloved by Allah.
-11. নীল দরিয়ার নামে (Nil Doriyar Name) — Literary reflections and travels.
-12. ইমাম আবু হানীফা রহ. আকাশে অঙ্কিত নাম (Imam Abu Hanifa Rh.) — Biography of the great jurist.
-13. যাকাত কল্যাণ রাষ্ট্রের বুনিয়াদ (Zakat Kolyan Rashtrer Buniyad) — Islamic welfare economics.
-14. নারীর শত্রু-মিত্র (Narir Sotru Mitru) — Women's rights and dignity in Islam.
-15. জাদু নয় কুদরত (Jadu Noy Kudrot) — Reality of miracles vs superstitious sorcery.
-16. তারাবীহ এবং মাযহাববিরোধী শিবির (Tarabih ebong Mazhab-birodhi Shibir) — Fiqh of Tarawih prayer.
-17. লামাজহাবী মুখ ও মুখোশ (Lamajhabi Mukh o Mukhosh) — Analytical defense of Islamic jurisprudence.
+## 17 Core Publications by Meshk Prokashon (50% Off)
+1. লেখালেখির শিকড় শিখর (Lekhalekhir Sikor Sikhor) — Art and craft of Bengali writing and style. MRP: ৳280, Offer: ৳140.
+2. সাহিত্যের ক্লাস (Shahitter Class) — Aesthetics of literature and storytelling. MRP: ৳300, Offer: ৳150.
+3. শব্দের সৌরভ শব্দের সানাই (Shobder Sourov Shobder Shanai) — Bengali vocabulary, word craft, and poetic prose. MRP: ৳260, Offer: ৳130.
+4. বক্তৃতার ক্লাস (Boktritar Class) — Public speaking, rhetoric, and oratory skills. MRP: ৳180, Offer: ৳90.
+5. আমাদের নবীজি সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম (Amader Nobiji SAW) — Comprehensive Seerat of the Prophet. MRP: ৳520, Offer: ৳260.
+6. নবীজির উপহার (Nobijir Upohar) — Moral gifts, teachings, and hadith etiquette. MRP: ৳130, Offer: ৳65.
+7. নবীজির শাফায়াত (Nobijir Safayat) — Theological inquiry into prophetic intercession. MRP: ৳160, Offer: ৳80.
+8. ভালোবেসে ভুল করিনি (Bhalobeshe Bhul Korini) — Reflections on truth and guidance. MRP: ৳140, Offer: ৳70.
+9. প্রিয় তালিবুল ইলম তোমার পরিচয় (Priyo Talibul Ilm Tomar Porichoy) — Roadmap for students of Islamic knowledge. MRP: ৳160, Offer: ৳80.
+10. আল্লাহ যাদেরকে ভালোবাসেন (Allah Jader Valobasen) — Qualities of those beloved by Allah. MRP: ৳140, Offer: ৳70.
+11. নীল দরিয়ার নামে (Nil Doriyar Name) — Literary travelogue and reflections on Egypt. MRP: ৳160, Offer: ৳80.
+12. ইমাম আবু হানীফা রহ. আকাশে অঙ্কিত নাম (Imam Abu Hanifa Rh.) — Biography of Imam Abu Hanifa. MRP: ৳100, Offer: ৳50.
+13. যাকাত কল্যাণ রাষ্ট্রের বুনিয়াদ (Zakat Kolyan Rashtrer Buniyad) — Islamic socio-economic welfare. MRP: ৳90, Offer: ৳45.
+14. নারীর শত্রু-মিত্র (Narir Sotru Mitru) — Women's dignity and rights in Islam. MRP: ৳100, Offer: ৳50.
+15. জাদু নয় কুদরত (Jadu Noy Kudrot) — Clarifying Islamic miracles vs witchcraft. MRP: ৳100, Offer: ৳50.
+16. তারাবীহ এবং মাযহাববিরোধী শিবির (Tarabih ebong Mazhab-birodhi Shibir) — Fiqh of Tarawih prayer. MRP: ৳90, Offer: ৳45.
+17. লামাজহাবী মুখ ও মুখোশ (Lamajhabi Mukh o Mukhosh) — Analytical defense of Islamic jurisprudence. MRP: ৳90, Offer: ৳45.
 
-## Major Classic Masterpieces by Author Muhammod Jainul Abidin (110+ Books Total)
+## Renowned Masterpieces by Author (Available in Author Archive)
 - তাতারীদের ইতিহাস (History of the Tartars - 2 Volumes)
 - বড় যদি হতে চাও (If You Want to Be Great - Youth Motivation)
 - শহীদানের গল্প শোন সমগ্র (Stories of the Martyrs - 10 Volumes)
-- এসো আরবি শিখি বাংলা নোট (Learn Arabic Companion)
-- আদব সৌভাগ্যের সোপান (Good Manners as Key to Fortune)
+- এসো আরবি শিখি বাংলা নোট (Companion to Learning Arabic)
 - আমাদের নবীজির ১০০ মুজেযা (100 Miracles of the Prophet)
-- খুতুবাতে মাদরাসঃ মুহাম্মদ সা দি গ্রেটেস্ট (Madras Speeches)
-- আর রাহীকুল মাখতুম (The Sealed Nectar - Translation/Editing)
+- আদব সৌভাগ্যের সোপান (Good Manners as Gateway to Success)
+
+## How to Order
+- Official Platform: https://mesk-nine.vercel.app
+- WhatsApp Order: +880 1978-174560
+- Marketplaces: Rokomari, Wafilife, Kitabghor

@@ -39,6 +39,8 @@ export interface SiteConfig {
   phoneDisplay: string;
   facebookPage: string;
   facebookProfile: string;
+  facebookGroupUrl: string;
+  facebookGroupMembers: string;
   rokomariPublisherUrl: string;
   rokomariAuthorUrl: string;
   wafilifePublisherUrl: string;

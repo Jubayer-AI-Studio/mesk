@@ -19,6 +19,8 @@ export const siteConfig: SiteConfig = {
   phoneDisplay: "01978-174560",
   facebookPage: "https://www.facebook.com/tima.mesaka/",
   facebookProfile: "https://www.facebook.com/tima.mesaka/",
+  facebookGroupUrl: "https://www.facebook.com/groups/859891888166881/",
+  facebookGroupMembers: "৭৫,০০০+ সদস্য",
   rokomariPublisherUrl:
     "https://www.rokomari.com/book/publisher/16359/mesk-prokashan?ref=psr101",
   rokomariAuthorUrl:

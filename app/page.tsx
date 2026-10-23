@@ -21,52 +21,141 @@ export default function Home() {
   // Filter classic masterpieces (books not part of the initial 17 Meshk direct ones)
   const classicMasterpieces = authorMasterArchive.filter((b) => !b.isMeshkOriginal);
 
-  // Structured Data Schema for Google SEO
+  // Comprehensive Schema.org JSON-LD Structured Data for Google & AI Search Engines
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://mesk-nine.vercel.app/#website",
+        "url": "https://mesk-nine.vercel.app",
+        "name": "মেশক প্রকাশন — মুহাম্মদ যাইনুল আবিদীন (জাইনুল আবেদীন)",
+        "alternateName": [
+          "মেসক প্রকাশন",
+          "Meshk Prokashon",
+          "Mesk Prokashan",
+          "মেশক",
+          "মেসক"
+        ],
+        "description": "মেশক প্রকাশন ও মাওলানা মুহাম্মদ যাইনুল আবিদীনের অফিশিয়াল গ্রন্থশালা ও প্রকাশনা প্ল্যাটফর্ম।",
+        "publisher": {
+          "@id": "https://mesk-nine.vercel.app/#organization"
+        },
+        "inLanguage": ["bn-BD", "en-US"]
+      },
+      {
         "@type": "Organization",
-        "@id": "https://meshkprokashon.com/#organization",
+        "@id": "https://mesk-nine.vercel.app/#organization",
         "name": siteConfig.brandName,
-        "alternateName": siteConfig.englishBrandName,
-        "url": "https://meshkprokashon.com",
-        "logo": "https://meshkprokashon.com/images/mesk-logo.png",
+        "alternateName": [
+          "মেসক প্রকাশন",
+          siteConfig.englishBrandName,
+          "Mesk Prokashan",
+          "Meshk Publication",
+          "মেশক",
+          "মেসক"
+        ],
+        "url": "https://mesk-nine.vercel.app",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mesk-nine.vercel.app/images/mesk-logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "image": "https://mesk-nine.vercel.app/images/og-meshk-banner.png",
         "slogan": siteConfig.slogan,
+        "founder": {
+          "@id": "https://mesk-nine.vercel.app/#author"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": siteConfig.whatsappDisplay,
-          "contactType": "customer service",
+          "contactType": "sales and customer service",
+          "contactOption": "WhatsApp",
+          "areaServed": "BD",
           "availableLanguage": ["bn", "en"]
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://meshkprokashon.com/#author",
-        "name": siteConfig.authorName,
-        "jobTitle": siteConfig.authorTitle,
-        "image": "https://mesk-nine.vercel.app/images/author-portrait-hd.jpg",
-        "description": siteConfig.authorBio,
+        },
         "sameAs": [
-          siteConfig.rokomariAuthorUrl,
-          siteConfig.facebookProfile
+          siteConfig.facebookPage,
+          siteConfig.facebookGroupUrl,
+          siteConfig.rokomariPublisherUrl,
+          siteConfig.wafilifePublisherUrl,
+          siteConfig.kitabghorPublisherUrl,
+          siteConfig.bdbooksPublisherUrl
         ]
       },
       {
-        "@type": "WebSite",
-        "@id": "https://meshkprokashon.com/#website",
-        "url": "https://meshkprokashon.com",
-        "name": `${siteConfig.brandName} - ${siteConfig.slogan}`,
-        "publisher": {
-          "@id": "https://meshkprokashon.com/#organization"
-        }
+        "@type": "Person",
+        "@id": "https://mesk-nine.vercel.app/#author",
+        "name": siteConfig.authorName,
+        "alternateName": [
+          "জাইনুল আবেদীন",
+          "যাইনুল আবিদীন",
+          "মাওলানা মুহাম্মদ যাইনুল আবিদীন",
+          "মাওলানা যাইনুল আবেদীন",
+          "মাওলানা জাইনুল আবেদীন",
+          "মুহম্মদ যাইনুল আবিদীন",
+          "জয়নুল আবেদীন",
+          "Muhammod Jainul Abidin",
+          "Muhammad Jainul Abidin",
+          "Maulana Muhammod Jainul Abidin",
+          "Zainul Abedin",
+          "Jainul Abedin"
+        ],
+        "jobTitle": siteConfig.authorTitle,
+        "image": "https://mesk-nine.vercel.app/images/author-portrait-hd.jpg",
+        "description": siteConfig.authorDetailedBio,
+        "worksFor": {
+          "@id": "https://mesk-nine.vercel.app/#organization"
+        },
+        "sameAs": [
+          siteConfig.rokomariAuthorUrl,
+          siteConfig.facebookProfile,
+          siteConfig.facebookGroupUrl
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://mesk-nine.vercel.app/#catalog",
+        "name": "মেশক প্রকাশনীর মৌলিক গ্রন্থসমূহ (Meshk Prokashon Books)",
+        "description": "মাওলানা মুহাম্মদ যাইনুল আবিদীনের ১৭টি মৌলিক গ্রন্থ সংকলন",
+        "numberOfItems": meshkOriginalBooks.length,
+        "itemListElement": meshkOriginalBooks.map((book, idx) => ({
+          "@type": "ListItem",
+          "position": idx + 1,
+          "item": {
+            "@type": "Book",
+            "name": book.title,
+            "url": "https://mesk-nine.vercel.app",
+            "author": {
+              "@id": "https://mesk-nine.vercel.app/#author"
+            },
+            "publisher": {
+              "@id": "https://mesk-nine.vercel.app/#organization"
+            },
+            "image": `https://mesk-nine.vercel.app${book.coverImage}`,
+            "inLanguage": "bn",
+            "bookFormat": "https://schema.org/Paperback",
+            "numberOfPages": book.pages,
+            "description": book.synopsis,
+            "offers": {
+              "@type": "Offer",
+              "price": book.salePrice,
+              "priceCurrency": "BDT",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@id": "https://mesk-nine.vercel.app/#organization"
+              }
+            }
+          }
+        }))
       }
     ]
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F6F1E7] via-[#ECE0CC] to-[#DFCDB0] text-stone-900 flex flex-col font-sans antialiased selection:bg-amber-200 selection:text-amber-950 relative overflow-x-hidden">
-      {/* Google Structured Data Injection */}
+      {/* Google & AI Structured Data Injection */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

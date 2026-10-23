@@ -19,13 +19,13 @@ export default function Hero({ onOpenAuthorBio }: HeroProps) {
         <div
           onClick={onOpenAuthorBio}
           className="w-44 sm:w-52 md:w-56 aspect-[1024/960] p-1.5 bg-gradient-to-b from-amber-600/50 via-amber-800/70 to-amber-950/90 rounded-2xl sm:rounded-3xl shadow-xl ring-4 ring-amber-500/20 mx-auto relative transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl cursor-pointer group"
-          title="মাওলানা মুহাম্মদ যাইনুল আবিদীনের সংক্ষিপ্ত জীবনী দেখুন"
+          title="মাওলানা মুহাম্মদ যাইনুল আবিদীনের (জাইনুল আবেদীন) সংক্ষিপ্ত জীবনী দেখুন"
         >
           <div className="w-full h-full rounded-[14px] sm:rounded-[20px] overflow-hidden bg-stone-900 relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/author-portrait-hd.jpg"
-              alt={siteConfig.authorName}
+              alt="মাওলানা মুহাম্মদ যাইনুল আবিদীন (জাইনুল আবেদীন) - মেশক প্রকাশনের প্রতিষ্ঠাতা ও লেখক"
               className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
           </div>
@@ -39,13 +39,18 @@ export default function Hero({ onOpenAuthorBio }: HeroProps) {
       </div>
 
       {/* Author Name & Badges */}
-      <div className="flex items-center justify-center gap-2 mb-2">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
-          {siteConfig.authorName}
-        </h1>
-        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-amber-200/90 text-amber-950 border border-amber-400/60 shadow-2xs">
-          লেখক ও প্রতিষ্ঠাতা
-        </span>
+      <div className="flex flex-col items-center justify-center gap-1 mb-2">
+        <div className="flex items-center justify-center gap-2">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+            {siteConfig.authorName}
+          </h1>
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-amber-200/90 text-amber-950 border border-amber-400/60 shadow-2xs">
+            লেখক ও প্রতিষ্ঠাতা
+          </span>
+        </div>
+        <p className="text-xs sm:text-sm font-semibold text-amber-950/80">
+          মাওলানা মুহাম্মদ যাইনুল আবিদীন (জাইনুল আবেদীন) • মেশক প্রকাশন (মেসক)
+        </p>
       </div>
 
       {/* Subtitle / Bio summary */}
