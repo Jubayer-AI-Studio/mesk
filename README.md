@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+  <h1>📚 মেস্ক প্রকাশন (Meshk Prokashon)</h1>
+  <p><b>Islamic Publishing House & Modern Literary Distribution Platform with WhatsApp Automation</b></p>
 
-First, run the development server:
+  [![Next.js](https://img.shields.io/badge/Next.js-15_(App_Router)-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+  [![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+  [![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8?style=for-the-badge&logo=pwa)](https://web.dev/progressive-web-apps/)
+  [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-mesk--nine.vercel.app-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://mesk-nine.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+</div>
+
+---
+
+## 🌟 ১. পরিচিতি ও উদ্দেশ্য (Overview)
+
+**মেস্ক প্রকাশন (Meshk Prokashon)** হলো সমকালীন ইসলামী সাহিত্য, চিন্তাশীল রচনা এবং গবেষণাধর্মী বই প্রকাশের একটি সর্বাধুনিক ওয়েব প্ল্যাটফর্ম। এটি প্রচলিত বই বিক্রয় সাইটগুলোর চেয়ে আলাদা—এখানে অত্যন্ত দ্রুতগতির সার্ভার-রেন্ডারড ক্যাটালগ, অফলাইন পিডব্লিউএ সাপোর্ট এবং নিরবচ্ছিন্ন হোয়াটসঅ্যাপ চেকআউট ইন্টিগ্রেশন রয়েছে।
+
+---
+
+## 🚀 ২. মূল বৈশিষ্ট্যসমূহ (Key Capabilities)
+
+* **📖 হাইব্রিড বুক ক্যাটালগ:** বইয়ের সারসংক্ষেপ, লেখক পরিচিতি, ইনডেক্স এবং সূচিপত্রের তাৎক্ষণিক প্রিভিউ।
+* **⚡ সাব-সেকেন্ড পেজ লোড:** Next.js 15 App Router এবং এজ ক্যাশিংয়ের মাধ্যমে যেকোনো ডিভাইসে পলকের মধ্যে পেইজ ওপেন হয়।
+* **📲 ১-ক্লিক হোয়াটসঅ্যাপ অর্ডার ডিসপ্যাচ:** কার্টে বই যুক্ত করার পর স্বয়ংক্রিয়ভাবে ডেলিভারি চার্জ ও ঠিকানা হিসাব করে মেস্ক প্রকাশনীর হোয়াটসঅ্যাপ নম্বরে সুনির্দিষ্ট অর্ডার রিকোয়েস্ট তৈরি করে।
+* **📱 PWA অফলাইন সাপোর্ট:** ইনস্টলযোগ্য Progressive Web App হওয়ায় নেটওয়ার্ক ড্রপ করলেও পাঠক পূর্বে ব্রাউজ করা বইসমূহ দেখতে পারেন।
+* **🎨 রুচিশীল ইসলামিক টাইপোগ্রাফি:** বাংলা ফন্ট ও মার্জিন রেন্ডারিংয়ে আন্তর্জাতিক প্রকাশনার মান বজায় রাখা হয়েছে।
+
+---
+
+## 🛠️ ৩. সিস্টেম আর্কিটেকচার (Architecture Flow)
+
+```
+[READER BROWSER / PWA]
+          │
+          ▼ (HTTP/2 Edge Stream)
+[NEXT.JS 15 APP ROUTER] ──► Edge Static Regeneration (SSG + ISR)
+          │
+          ├──► Interactive Cart State Management
+          │
+          ▼ (Payload Formatter)
+[AUTOMATED WHATSAPP DISPATCH] ──► Direct Order Packet with SKU & Courier Address
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 ৪. লোকাল ডেভেলপমেন্ট (Local Setup)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# রিপোজিটরি ক্লোন করুন
+git clone https://github.com/Jubayer-AI-Studio/mesk.git
 
-## Learn More
+# ফোল্ডারে প্রবেশ করুন
+cd mesk
 
-To learn more about Next.js, take a look at the following resources:
+# ডিপেন্ডেন্সি ইনস্টল করুন
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# লোকাল ডেভ সার্ভার রান করুন
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ব্রাউজারে `http://localhost:3000` ওপেন করে লাইভ প্রিভিউ দেখুন।
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div align="center">
+  <b>Developed by Jubayer Ahmad — Senior Full-Stack Systems Architect</b><br/>
+  <a href="https://mesk-nine.vercel.app">মেস্ক প্রকাশন লাইভ সাইট</a> • <a href="https://github.com/Jubayer-AI-Studio">GitHub প্রোফাইল</a>
+</div>
